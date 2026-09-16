@@ -359,33 +359,39 @@ h3 {
 
 .services-header {
     grid-column: 1 / -1;
-
     position: relative;
-
     height: 220px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     margin-bottom: 45px;
 }
+
+.services-header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background: var(--border);
+    z-index: 0;
+}
+
 .services-header img {
     position: absolute;
-
     width: 300px;
     height: auto;
-
     left: calc(50% - 310px);
-
     transform: translateX(-50%);
-
     display: block;
+    z-index: 1;
 }
 
 .services-header h2 {
     margin: 0;
     text-align: center;
+    z-index: 1;
 }
 
 
@@ -736,6 +742,19 @@ footer {
     #why-qa-mercenary p {
         font-size: 1.5rem;
     }
+    .services-header {
+    height: 220px;
+}
+
+.services-header img {
+    width: 260px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.services-header h2 {
+    z-index: 1;
+}
 }
 #about > h2 {
     width: 100%;
