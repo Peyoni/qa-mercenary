@@ -23,7 +23,6 @@ nav {
     margin: 0 auto;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -34,20 +33,39 @@ nav > a {
     color: black;
     letter-spacing: -0.5px;
 }
+
 nav > a:hover {
     color: #e10600;
+}
+
+nav .brand-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+nav .brand-logo img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    display: block;
+}
+
+nav > ul {
+    margin-left: auto;
 }
 
 nav ul {
     display: flex;
     gap: 24px;
     list-style: none;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     padding: 0;
 }
 
 nav ul a {
-
     text-decoration: none;
     color: black;
     transition: color 0.2s ease;
@@ -383,4 +401,237 @@ footer {
     #why-qa-mercenary p {
         font-size: 1.5rem;
     }
+}
+/* ========================================
+   QA MERCENARY — VISUAL FOUNDATION
+   ======================================== */
+
+:root {
+    --font-body: "Inter", sans-serif;
+    --font-display: "Cinzel", serif;
+    --bg-dark: #15171c;
+    --bg-deep: #0c0e12;
+    --surface: #181b21;
+    --surface-hover: #20242c;
+    --text-main: #e7e7e4;
+    --text-muted: #9a9ca3;
+    --border: #30333a;
+    --accent: #b51c1c;
+    --accent-hover: #d32626;
+}
+
+/* Base */
+
+body {
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255, 255, 255, 0.035),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.018) 25%,
+            transparent 25%
+        ),
+        linear-gradient(
+            315deg,
+            rgba(255, 255, 255, 0.012) 25%,
+            transparent 25%
+        ),
+        var(--bg-dark);
+
+    background-size:
+        auto,
+        80px 80px,
+        80px 80px,
+        auto;
+
+    color: var(--text-main);
+    font-family: var(--font-body);
+}
+h1,
+h2,
+h3,
+nav > a {
+    font-family: var(--font-display);
+}
+
+/* Subtle forge-like texture */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.025) 0px,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px,
+            transparent 4px
+        );
+
+    opacity: 0.5;
+}
+
+/* Header */
+
+header {
+    border-bottom: 1px solid var(--border);
+    background: rgba(12, 14, 18, 0.88);
+    backdrop-filter: blur(8px);
+}
+
+/* Navigation */
+
+nav > a {
+    color: var(--text-main);
+}
+
+nav > a:hover {
+    color: var(--accent-hover);
+}
+
+nav ul a {
+    color: var(--text-muted);
+}
+
+nav ul a:hover {
+    color: var(--accent-hover);
+}
+
+/* Hero */
+
+#hero p:nth-of-type(2) {
+    color: var(--text-muted);
+}
+
+/* Buttons */
+
+#hero a,
+#contact a {
+    background-color: var(--accent);
+}
+
+#hero a:hover,
+#contact a:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Sections */
+
+#services article,
+.portfolio-item {
+    border-color: var(--border);
+    background: rgba(24, 27, 33, 0.55);
+}
+
+#services article:hover,
+.portfolio-item:hover {
+    background: rgba(32, 36, 44, 0.7);
+}
+
+/* Secondary text */
+
+#how-i-work li p,
+#contact p {
+    color: var(--text-muted);
+}
+
+/* Accent lines */
+
+#how-i-work li {
+    border-top-color: var(--accent);
+}
+
+/* Major separators */
+
+#why-qa-mercenary,
+#contact {
+    border-color: var(--border);
+}
+
+/* Contact links */
+
+.contact-links a {
+    color: var(--text-muted) !important;
+}
+
+.contact-links a:hover {
+    color: var(--accent-hover) !important;
+}
+
+/* Footer */
+
+footer {
+    border-color: var(--border);
+    color: var(--text-muted);
+}
+
+/* ========================================
+   ARMORY BACKGROUND
+   ======================================== */
+
+body.armory-bg {
+    background:
+        radial-gradient(
+            ellipse at 75% 30%,
+            rgba(181, 28, 28, 0.08),
+            transparent 35%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.012) 1px,
+            transparent 1px
+        ),
+        var(--bg-dark);
+
+    background-size:
+        auto,
+        140px 140px,
+        140px 140px,
+        auto;
+}
+/* ========================================
+   QA MERCENARY CURSOR
+   ======================================== */
+
+body {
+    cursor: url("../images/gauntlet.cur"), auto;
+}
+
+a,
+button {
+    cursor: url("../images/gauntlet.cur"), pointer;
+}
+/* ========================================
+   BRAND LOGO
+   ======================================== */
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav .brand-logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+nav .brand-logo img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    display: block;
 }
