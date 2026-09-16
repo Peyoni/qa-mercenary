@@ -360,22 +360,34 @@ h3 {
 .services-header {
     grid-column: 1 / -1;
 
+    position: relative;
+
+    height: 220px;
+
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     margin-bottom: 45px;
 }
-
-.services-header h2 {
-    margin-bottom: 8px;
-}
-
 .services-header img {
-    width: 150px;
+    position: absolute;
+
+    width: 300px;
     height: auto;
+
+    left: calc(50% - 310px);
+
+    transform: translateX(-50%);
+
     display: block;
 }
+
+.services-header h2 {
+    margin: 0;
+    text-align: center;
+}
+
 
 /* ========================================
    ABOUT
@@ -724,4 +736,8 @@ footer {
     #why-qa-mercenary p {
         font-size: 1.5rem;
     }
+}
+#about > h2 {
+    width: 100%;
+    text-align: center;
 }
