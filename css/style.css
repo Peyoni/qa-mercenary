@@ -8,10 +8,35 @@ html {
 
 body {
     margin: 0;
-    background-color: white;
-    color: black;
-    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--text-main);
+    font-family: var(--font-body);
     line-height: 1.6;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255, 255, 255, 0.035),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.018) 25%,
+            transparent 25%
+        ),
+        linear-gradient(
+            315deg,
+            rgba(255, 255, 255, 0.012) 25%,
+            transparent 25%
+        ),
+        var(--bg-dark);
+
+    background-size:
+        auto,
+        80px 80px,
+        80px 80px,
+        auto;
+
+    cursor: url("../images/gauntlet.cur"), auto;
 }
 
 /* ========================================
@@ -37,36 +62,6 @@ body {
     --accent-hover: #d32626;
 }
 
-body {
-    background:
-        radial-gradient(
-            circle at 50% 0%,
-            rgba(255, 255, 255, 0.035),
-            transparent 45%
-        ),
-        linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.018) 25%,
-            transparent 25%
-        ),
-        linear-gradient(
-            315deg,
-            rgba(255, 255, 255, 0.012) 25%,
-            transparent 25%
-        ),
-        var(--bg-dark);
-
-    background-size:
-        auto,
-        80px 80px,
-        80px 80px,
-        auto;
-
-    color: var(--text-main);
-    font-family: var(--font-body);
-
-    cursor: url("../images/gauntlet.cur"), auto;
-}
 
 body::before {
     content: "";
@@ -270,11 +265,14 @@ h3 {
     text-transform: uppercase;
 
     white-space: nowrap;
-}
-.hire-badge {
     text-decoration: none;
+
     cursor: url("../images/gauntlet.cur"), pointer;
-    transition: border-color .2s ease, color .2s ease, background-color .2s ease;
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background-color 0.2s ease;
 }
 
 .hire-badge:hover {
@@ -789,8 +787,6 @@ footer {
 
 #about > h2,
 #services .services-header h2,
-#game-qa > h2,
-#how-i-work > h2,
 #why-qa-mercenary > h2,
 #contact > h2 {
     text-align: center;
@@ -989,9 +985,4 @@ footer {
         margin-top: 40px;
         order: 2;
     }
-}
-
-#about > h2 {
-    width: 100%;
-    text-align: center;
 }
