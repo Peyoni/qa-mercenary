@@ -248,38 +248,6 @@ h3 {
     display: block;
 }
 
-.hire-badge {
-    display: inline-block;
-
-    margin-top: 22px;
-    padding: 8px 14px;
-
-    border: 1px solid #4caf50;
-    background: rgba(12, 14, 18, 0.9);
-    color: #6fcf72;
-
-    font-family: var(--font-display);
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-
-    white-space: nowrap;
-    text-decoration: none;
-
-    cursor: url("../images/gauntlet.cur"), pointer;
-
-    transition:
-        border-color 0.2s ease,
-        color 0.2s ease,
-        background-color 0.2s ease;
-}
-
-.hire-badge:hover {
-    border-color: #4da3ff;
-    color: #7dbdff;
-    background-color: rgba(77, 163, 255, 0.08);
-}
 
 #hero h1 {
     font-size: 4.5rem;
@@ -854,12 +822,6 @@ footer {
         max-width: 260px;
     }
 
-    .hire-badge {
-        margin-top: 22px;
-        top: auto;
-        right: auto;
-        transform: none;
-    }
 
     /* About / Game QA */
 
@@ -1056,4 +1018,87 @@ footer {
     50% {
         transform: translateY(-5px);
     }
+}
+/* =========================
+   TEST SWORD CTA
+   ========================= */
+
+.sword-cta {
+    margin-top: 35px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+}
+
+.sword-cta a {
+    display: block;
+    width: 400px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+.sword-cta img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    transition:
+        filter 0.25s ease,
+        transform 0.25s ease;
+}
+
+.sword-cta span {
+    margin-top: 6px;
+
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    color: var(--text-muted);
+
+    transition:
+        color 0.25s ease,
+        letter-spacing 0.25s ease;
+}
+
+.sword-cta span::before,
+.sword-cta span::after {
+    content: "⬆";
+    display: inline-block;
+
+    margin: 0 12px;
+
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: inherit;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+.sword-cta:hover a {
+    transform: translateY(-5px) rotate(-2deg);
+}
+
+.sword-cta:hover img {
+    filter: drop-shadow(0 0 10px rgba(181, 28, 28, 0.55));
+}
+
+.sword-cta:hover span {
+    color: var(--accent-hover);
+    letter-spacing: 2.5px;
+}
+
+.sword-cta:hover span::before,
+.sword-cta:hover span::after {
+    transform: translateY(-3px);
 }
