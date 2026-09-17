@@ -370,42 +370,96 @@ h3 {
     z-index: 1;
 }
 .game-qa-header {
+
     grid-column: 1 / -1;
+
     position: relative;
+
     height: 220px;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     margin-bottom: 45px;
+
 }
 
 .game-qa-header::before {
+
     content: "";
+
     position: absolute;
+
     left: 0;
+
     right: 0;
+
     top: 50%;
+
     height: 1px;
+
     background: var(--border);
+
     z-index: 0;
+
 }
 
 .game-qa-header h2 {
+
     margin: 0;
+
     text-align: center;
+
     z-index: 1;
+
 }
 
-.game-qa-header img {
+/* Ubisoft logo */
+
+.game-qa-header .ubisoft-logo {
+
     position: absolute;
-    width: 300px;
+
+    width: 250px;
+
     height: auto;
-    right: calc(50% - 280px);
-    transform: translateX(50%);
+
+    left: calc(50% - 450px);
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
     display: block;
+
     z-index: 1;
+
 }
 
+/* Victory mascot */
+
+.game-qa-header > img:not(.ubisoft-logo) {
+
+    position: absolute;
+
+    width: 300px;
+
+    height: auto;
+
+    right: calc(50% - 280px);
+
+    transform: translateX(50%);
+
+    display: block;
+
+    z-index: 1;
+
+
+
+}
 
 /* ========================================
    ABOUT
@@ -859,19 +913,58 @@ footer {
     }
 
     .game-qa-header {
-        height: 220px;
-    }
+    height: auto;
 
-    .game-qa-header img {
-        width: 260px;
-        right: 50%;
-        transform: translateX(50%);
-        z-index: 0;
-    }
+    display: flex;
+    flex-direction: column;
 
-    .game-qa-header h2 {
-        z-index: 1;
-    }
+    justify-content: flex-start;
+    align-items: center;
+
+    gap: 0;
+
+    margin-bottom: 45px;
+}
+
+.game-qa-header::before {
+    display: none;
+}
+
+.game-qa-header .ubisoft-logo {
+    position: static;
+
+    width: 180px;
+    height: auto;
+
+    transform: none;
+
+    margin-bottom: 15px;
+
+    order: 1;
+}
+
+.game-qa-header h2 {
+    order: 2;
+
+    margin: 0;
+
+    font-size: 2.2rem;
+
+    text-align: center;
+}
+
+.game-qa-header > img:not(.ubisoft-logo) {
+    position: static;
+
+    width: 220px;
+    height: auto;
+
+    transform: none;
+
+    margin-top: 15px;
+
+    order: 3;
+}
 
     .game-qa-portfolio {
         grid-template-columns: 1fr;
@@ -894,6 +987,7 @@ footer {
         left: 50%;
         transform: translateX(-50%);
         z-index: 0;
+        bottom: 32%;
     }
 
     .how-i-work-header h2 {
