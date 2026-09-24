@@ -39,6 +39,7 @@ body {
     cursor: url("../images/gauntlet.cur"), auto;
 }
 
+
 /* ========================================
    ROOT / VISUAL FOUNDATION
    ======================================== */
@@ -82,6 +83,7 @@ body::before {
     opacity: 0.5;
 }
 
+
 body.armory-bg {
     background:
         radial-gradient(
@@ -108,12 +110,14 @@ body.armory-bg {
         auto;
 }
 
+
 h1,
 h2,
 h3,
 nav > a {
     font-family: var(--font-display);
 }
+
 
 /* ========================================
    HEADER / NAVIGATION
@@ -125,6 +129,7 @@ header {
     backdrop-filter: blur(8px);
 }
 
+
 nav {
     max-width: 1100px;
     margin: 0 auto;
@@ -134,6 +139,7 @@ nav {
     align-items: center;
 }
 
+
 nav > a {
     font-size: 1.4rem;
     font-weight: 800;
@@ -142,9 +148,11 @@ nav > a {
     letter-spacing: -0.5px;
 }
 
+
 nav > a:hover {
     color: var(--accent-hover);
 }
+
 
 nav .brand-logo {
     display: flex;
@@ -153,6 +161,7 @@ nav .brand-logo {
     margin-right: 10px;
 }
 
+
 nav .brand-logo img {
     width: 44px;
     height: 44px;
@@ -160,9 +169,11 @@ nav .brand-logo img {
     display: block;
 }
 
+
 nav > ul {
     margin-left: auto;
 }
+
 
 nav ul {
     display: flex;
@@ -174,6 +185,7 @@ nav ul {
     padding: 0;
 }
 
+
 nav ul a {
     text-decoration: none;
     color: var(--text-muted);
@@ -182,14 +194,17 @@ nav ul a {
     cursor: url("../images/gauntlet.cur"), pointer;
 }
 
+
 nav ul a:hover {
     color: var(--accent-hover);
 }
+
 
 a,
 button {
     cursor: url("../images/gauntlet.cur"), pointer;
 }
+
 
 /* ========================================
    MAIN / SECTIONS
@@ -200,18 +215,22 @@ main {
     margin: 0 auto;
 }
 
+
 section {
     padding: 100px 20px;
 }
+
 
 h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
 }
 
+
 h3 {
     margin-bottom: 10px;
 }
+
 
 /* ========================================
    HERO
@@ -228,9 +247,11 @@ h3 {
     gap: 60px;
 }
 
+
 .hero-content {
     flex: 1;
 }
+
 
 .hero-mascot {
     position: relative;
@@ -240,6 +261,7 @@ h3 {
     justify-content: center;
     align-items: center;
 }
+
 
 .hero-mascot img {
     width: 100%;
@@ -259,14 +281,117 @@ h3 {
     letter-spacing: -2px;
 }
 
+
 #hero p {
     max-width: 650px;
 }
+
 
 #hero .hero-content p {
     font-size: 1.2rem;
     color: var(--text-muted);
 }
+
+
+/* ========================================
+   TEST SWORD CTA
+   ======================================== */
+
+.sword-cta {
+    margin: 0 auto 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+
+.sword-cta a {
+    display: block;
+    width: 400px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+
+.sword-cta img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    transition:
+        filter 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.sword-cta span {
+    display: block;
+
+    margin-top: 6px;
+
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    color: var(--text-muted);
+
+    text-align: center;
+
+    transition:
+        color 0.25s ease,
+        letter-spacing 0.25s ease;
+}
+
+
+.sword-cta span::before,
+.sword-cta span::after {
+    content: "⬆";
+    display: inline-block;
+
+    margin: 0 12px;
+
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: inherit;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+
+.sword-cta:hover a {
+    transform: translateY(-5px) rotate(-2deg);
+}
+
+
+.sword-cta:hover img {
+    filter: drop-shadow(0 0 10px rgba(181, 28, 28, 0.55));
+}
+
+
+.sword-cta:hover span {
+    color: var(--accent-hover);
+    letter-spacing: 2.5px;
+}
+
+
+.sword-cta:hover span::before,
+.sword-cta:hover span::after {
+    transform: translateY(-3px);
+}
+
 
 /* ========================================
    SERVICES
@@ -277,6 +402,7 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
+
 
 #services article {
     min-height: 170px;
@@ -296,11 +422,13 @@ h3 {
         background-color 0.2s ease;
 }
 
+
 #services article:hover {
     transform: translateY(-4px);
     background: var(--surface-hover);
     border-color: #4a4d55;
 }
+
 
 #services h3 {
     margin-top: 0;
@@ -313,6 +441,7 @@ h3 {
     position: relative;
     padding-left: 14px;
 }
+
 
 #services h3::before {
     content: "";
@@ -328,49 +457,75 @@ h3 {
     background: var(--accent);
 }
 
+
 #services p {
     margin: 0;
     color: var(--text-muted);
 }
 
+
 .services-header {
     grid-column: 1 / -1;
+
     position: relative;
+
     height: 220px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     margin-bottom: 45px;
 }
+
 
 .services-header::before {
     content: "";
+
     position: absolute;
+
     left: 0;
     right: 0;
     top: 50%;
+
     height: 1px;
+
     background: var(--border);
+
     z-index: 0;
 }
 
+
 .services-header img {
     position: absolute;
+
     width: 300px;
     height: auto;
+
     left: calc(50% - 310px);
+
     transform: translateX(-50%);
+
     display: block;
+
     z-index: 1;
 }
+
 
 .services-header h2 {
     margin: 0;
+
     text-align: center;
+
     z-index: 1;
 }
-.game-qa-header {
 
+
+/* ========================================
+   GAME QA HEADER
+   ======================================== */
+
+.game-qa-header {
     grid-column: 1 / -1;
 
     position: relative;
@@ -384,11 +539,10 @@ h3 {
     align-items: center;
 
     margin-bottom: 45px;
-
 }
 
-.game-qa-header::before {
 
+.game-qa-header::before {
     content: "";
 
     position: absolute;
@@ -404,23 +558,21 @@ h3 {
     background: var(--border);
 
     z-index: 0;
-
 }
 
-.game-qa-header h2 {
 
+.game-qa-header h2 {
     margin: 0;
 
     text-align: center;
 
     z-index: 1;
-
 }
+
 
 /* Ubisoft logo */
 
 .game-qa-header .ubisoft-logo {
-
     position: absolute;
 
     width: 250px;
@@ -436,13 +588,12 @@ h3 {
     display: block;
 
     z-index: 1;
-
 }
+
 
 /* Victory mascot */
 
 .game-qa-header > img:not(.ubisoft-logo) {
-
     position: absolute;
 
     width: 300px;
@@ -456,11 +607,8 @@ h3 {
     display: block;
 
     z-index: 1;
-    
-
-
-
 }
+
 
 /* ========================================
    ABOUT
@@ -472,15 +620,18 @@ h3 {
     gap: 80px;
 }
 
+
 .about-intro p {
     font-size: 1.5rem;
     line-height: 1.4;
     margin-top: 0;
 }
 
+
 .about-details p {
     margin-top: 0;
 }
+
 
 /* ========================================
    GAME QA
@@ -492,11 +643,13 @@ h3 {
     gap: 80px;
 }
 
+
 .game-qa-intro p {
     font-size: 1.5rem;
     line-height: 1.4;
     margin-top: 0;
 }
+
 
 .game-qa-details {
     display: grid;
@@ -504,18 +657,23 @@ h3 {
     gap: 40px;
 }
 
+
 .game-qa-details ul {
     padding-left: 20px;
 }
 
+
 .game-qa-details li {
     margin-bottom: 10px;
 }
+
+
 .game-qa-details > div {
     padding: 24px;
     border: 1px solid var(--border);
     background: rgba(24, 27, 33, 0.55);
 }
+
 
 .game-qa-details h3 {
     margin-top: 0;
@@ -525,14 +683,17 @@ h3 {
     font-size: 1.2rem;
 }
 
+
 .game-qa-details ul {
     margin: 0;
     padding-left: 20px;
 }
 
+
 .game-qa-details li:last-child {
     margin-bottom: 0;
 }
+
 
 /* ========================================
    GAME QA PORTFOLIO
@@ -547,6 +708,7 @@ h3 {
     gap: 40px;
 }
 
+
 .portfolio-item {
     border: 1px solid var(--border);
     background: rgba(24, 27, 33, 0.55);
@@ -558,9 +720,11 @@ h3 {
         background-color 0.2s ease;
 }
 
+
 .portfolio-item:hover {
     background: rgba(32, 36, 44, 0.7);
 }
+
 
 .portfolio-item img {
     display: block;
@@ -568,10 +732,12 @@ h3 {
     height: auto;
 }
 
+
 .portfolio-item h3 {
     margin-top: 20px;
     margin-bottom: 8px;
 }
+
 
 /* ========================================
    HOW I WORK
@@ -589,20 +755,25 @@ h3 {
     gap: 20px;
 }
 
+
 #how-i-work li {
     border-top: 2px solid var(--accent);
     padding-top: 20px;
 }
+
 
 #how-i-work li h3 {
     font-size: 1.3rem;
     margin-top: 0;
 }
 
+
 #how-i-work li p {
     color: var(--text-muted);
     margin-bottom: 0;
 }
+
+
 .how-i-work-header {
     position: relative;
 
@@ -614,6 +785,7 @@ h3 {
 
     margin-bottom: 45px;
 }
+
 
 .how-i-work-header::before {
     content: "";
@@ -631,6 +803,7 @@ h3 {
     z-index: 0;
 }
 
+
 .how-i-work-header img {
     position: absolute;
 
@@ -646,6 +819,7 @@ h3 {
     z-index: 1;
 }
 
+
 .how-i-work-header h2 {
     margin: 0;
 
@@ -653,6 +827,7 @@ h3 {
 
     z-index: 1;
 }
+
 
 /* ========================================
    WHY QA MERCENARY
@@ -663,22 +838,28 @@ h3 {
     border-top: 1px solid var(--border);
 }
 
+
 #why-qa-mercenary h2 {
     margin-bottom: 30px;
 }
+
 
 #why-qa-mercenary p {
     font-size: 2rem;
     font-weight: bold;
     margin: 10px 0;
 }
+
+
 .why-content {
     position: relative;
 }
 
+
 .why-text {
     text-align: center;
 }
+
 
 .why-mascot {
     position: absolute;
@@ -688,11 +869,13 @@ h3 {
     width: 260px;
 }
 
+
 .why-mascot img {
     width: 100%;
     height: auto;
     display: block;
 }
+
 
 /* ========================================
    CONTACT
@@ -707,6 +890,7 @@ h3 {
     border-top: 1px solid var(--border);
 }
 
+
 #contact p {
     max-width: 550px;
     margin: 0 auto;
@@ -714,6 +898,7 @@ h3 {
     color: var(--text-muted);
     font-size: 1.1rem;
 }
+
 
 #contact a {
     display: inline-block;
@@ -729,13 +914,17 @@ h3 {
 
     transition: background-color 0.2s ease;
 }
+
+
 .contact-content {
     position: relative;
 }
 
+
 .contact-text {
     text-align: center;
 }
+
 
 .contact-mascot {
     position: absolute;
@@ -745,15 +934,18 @@ h3 {
     width: 260px;
 }
 
+
 .contact-mascot img {
     width: 100%;
     height: auto;
     display: block;
 }
 
+
 #contact a:hover {
     background-color: var(--accent-hover);
 }
+
 
 .contact-links {
     margin-top: 25px;
@@ -763,6 +955,7 @@ h3 {
 
     gap: 25px;
 }
+
 
 .contact-links a {
     margin-top: 0 !important;
@@ -782,15 +975,18 @@ h3 {
     gap: 7px;
 }
 
+
 .contact-links svg {
     width: 18px;
     height: 18px;
     fill: currentColor;
 }
 
+
 .contact-links a:hover {
     color: var(--accent-hover) !important;
 }
+
 
 /* ========================================
    FOOTER
@@ -804,6 +1000,8 @@ footer {
     text-align: center;
     color: var(--text-muted);
 }
+
+
 /* ========================================
    SECTION HEADINGS
    ======================================== */
@@ -814,6 +1012,7 @@ footer {
 #contact > h2 {
     text-align: center;
 }
+
 
 /* ========================================
    RESPONSIVE
@@ -826,15 +1025,18 @@ footer {
         gap: 20px;
     }
 
+
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
     }
 
+
     section {
         padding: 70px 20px;
     }
+
 
     /* Hero */
 
@@ -851,11 +1053,13 @@ footer {
         padding-top: 80px;
     }
 
+
     .hero-content {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
 
     #hero h1 {
         font-size: 3rem;
@@ -863,18 +1067,49 @@ footer {
         letter-spacing: -1px;
     }
 
+
     #hero .hero-content p {
         font-size: 1.05rem;
         max-width: 550px;
     }
+
 
     .hero-mascot {
         flex: 0 0 auto;
         width: 260px;
     }
 
+
     .hero-mascot img {
         max-width: 260px;
+    }
+
+
+    /* Test Sword CTA */
+
+    .sword-cta {
+        width: 100%;
+
+        margin-top: -25px;
+        margin-bottom: 60px;
+    }
+
+
+    .sword-cta a {
+        width: 300px;
+    }
+
+
+    .sword-cta span {
+        font-size: 0.85rem;
+        letter-spacing: 1.5px;
+    }
+
+
+    .sword-cta span::before,
+    .sword-cta span::after {
+        margin: 0 8px;
+        font-size: 1rem;
     }
 
 
@@ -886,15 +1121,18 @@ footer {
         gap: 40px;
     }
 
+
     /* Services */
 
     #services {
         grid-template-columns: 1fr;
     }
 
+
     .services-header {
         height: 220px;
     }
+
 
     .services-header img {
         width: 260px;
@@ -902,9 +1140,11 @@ footer {
         transform: translateX(-50%);
     }
 
+
     .services-header h2 {
         z-index: 1;
     }
+
 
     /* Game QA */
 
@@ -913,64 +1153,71 @@ footer {
         gap: 30px;
     }
 
+
     .game-qa-header {
-    height: auto;
+        height: auto;
 
-    display: flex;
-    flex-direction: column;
+        display: flex;
+        flex-direction: column;
 
-    justify-content: flex-start;
-    align-items: center;
+        justify-content: flex-start;
+        align-items: center;
 
-    gap: 0;
+        gap: 0;
 
-    margin-bottom: 45px;
-}
+        margin-bottom: 45px;
+    }
 
-.game-qa-header::before {
-    display: none;
-}
 
-.game-qa-header .ubisoft-logo {
-    position: static;
+    .game-qa-header::before {
+        display: none;
+    }
 
-    width: 180px;
-    height: auto;
 
-    transform: none;
+    .game-qa-header .ubisoft-logo {
+        position: static;
 
-    margin-bottom: 15px;
+        width: 180px;
+        height: auto;
 
-    order: 1;
-}
+        transform: none;
 
-.game-qa-header h2 {
-    order: 2;
+        margin-bottom: 15px;
 
-    margin: 0;
+        order: 1;
+    }
 
-    font-size: 2.2rem;
 
-    text-align: center;
-}
+    .game-qa-header h2 {
+        order: 2;
 
-.game-qa-header > img:not(.ubisoft-logo) {
-    position: static;
+        margin: 0;
 
-    width: 220px;
-    height: auto;
+        font-size: 2.2rem;
 
-    transform: none;
+        text-align: center;
+    }
 
-    margin-top: 15px;
 
-    order: 3;
-}
+    .game-qa-header > img:not(.ubisoft-logo) {
+        position: static;
+
+        width: 220px;
+        height: auto;
+
+        transform: none;
+
+        margin-top: 15px;
+
+        order: 3;
+    }
+
 
     .game-qa-portfolio {
         grid-template-columns: 1fr;
         gap: 30px;
     }
+
 
     /* How I Work */
 
@@ -979,9 +1226,11 @@ footer {
         gap: 30px;
     }
 
+
     .how-i-work-header {
         height: 220px;
     }
+
 
     .how-i-work-header img {
         width: 260px;
@@ -991,9 +1240,11 @@ footer {
         bottom: 32%;
     }
 
+
     .how-i-work-header h2 {
         z-index: 1;
     }
+
 
     /* Why QA Mercenary */
 
@@ -1001,15 +1252,18 @@ footer {
         font-size: 1.5rem;
     }
 
+
     .why-content {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
+
     .why-text {
         text-align: center;
     }
+
 
     .why-mascot {
         position: static;
@@ -1018,9 +1272,11 @@ footer {
         margin-top: 35px;
     }
 
+
     .why-mascot img {
         width: 100%;
     }
+
 
     /* Contact */
 
@@ -1030,10 +1286,12 @@ footer {
         align-items: center;
     }
 
+
     .contact-text {
         text-align: center;
         width: 100%;
     }
+
 
     .contact-mascot {
         position: static;
@@ -1042,7 +1300,10 @@ footer {
         margin-top: 40px;
         order: 2;
     }
+
 }
+
+
 /* =========================
    BUG SPOTTED
    ========================= */
@@ -1057,14 +1318,17 @@ footer {
     pointer-events: none;
 }
 
+
 .hidden-bug.visible {
     opacity: 0.85;
     pointer-events: auto;
 }
 
+
 .hidden-bug:hover .bug-sprite {
     filter: drop-shadow(0 0 7px rgba(181, 28, 28, 0.8));
 }
+
 
 .bug-sprite {
     width: 100%;
@@ -1072,6 +1336,7 @@ footer {
     display: block;
     animation: bug-float 2.5s ease-in-out infinite;
 }
+
 
 .bug-message {
     position: absolute;
@@ -1097,103 +1362,24 @@ footer {
 
     transition: opacity 0.25s ease;
 
-    /* JS counter-rotates this so the text stays horizontal */
     transform: translateX(-50%);
 }
+
 
 .bug-message.visible {
     opacity: 1;
 }
 
+
 @keyframes bug-float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
 
     50% {
         transform: translateY(-5px);
     }
-}
-/* =========================
-   TEST SWORD CTA
-   ========================= */
 
-.sword-cta {
-    margin-top: 35px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 100%;
-}
-
-.sword-cta a {
-    display: block;
-    width: 400px;
-
-    text-decoration: none;
-
-    transition:
-        transform 0.25s ease,
-        filter 0.25s ease;
-}
-
-.sword-cta img {
-    display: block;
-    width: 100%;
-    height: auto;
-
-    transition:
-        filter 0.25s ease,
-        transform 0.25s ease;
-}
-
-.sword-cta span {
-    margin-top: 6px;
-
-    font-family: var(--font-display);
-    font-size: 0.95rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-
-    color: var(--text-muted);
-
-    transition:
-        color 0.25s ease,
-        letter-spacing 0.25s ease;
-}
-
-.sword-cta span::before,
-.sword-cta span::after {
-    content: "⬆";
-    display: inline-block;
-
-    margin: 0 12px;
-
-    font-size: 1.15rem;
-    font-weight: 900;
-    color: inherit;
-
-    transition:
-        transform 0.25s ease,
-        color 0.25s ease;
-}
-
-.sword-cta:hover a {
-    transform: translateY(-5px) rotate(-2deg);
-}
-
-.sword-cta:hover img {
-    filter: drop-shadow(0 0 10px rgba(181, 28, 28, 0.55));
-}
-
-.sword-cta:hover span {
-    color: var(--accent-hover);
-    letter-spacing: 2.5px;
-}
-
-.sword-cta:hover span::before,
-.sword-cta:hover span::after {
-    transform: translateY(-3px);
 }
