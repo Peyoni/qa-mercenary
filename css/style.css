@@ -126,13 +126,20 @@ h3 { margin-bottom: 10px; }
 
 /* ===== BUTTONS (forged metal) ===== */
 .actions { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
-.btn, .sword-cta span { display: inline-block; padding: 14px 32px; color: #f6ebcf; font: 700 .9rem var(--font-display); letter-spacing: 2.5px; text-transform: uppercase; text-decoration: none; border: 1px solid var(--gold); background: linear-gradient(180deg, #b72b2b, #861818); box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 4px 0 #4a0d0d, 0 10px 20px rgba(0,0,0,.45); transition: transform .15s, box-shadow .15s, filter .2s; }
-.btn:hover, .sword-cta:hover span { transform: translateY(2px); filter: brightness(1.15); box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 2px 0 #4a0d0d, 0 6px 16px rgba(0,0,0,.45), 0 0 22px rgba(201,49,49,.35); }
+.btn { display: inline-block; padding: 14px 32px; color: #f6ebcf; font: 700 .9rem var(--font-display); letter-spacing: 2.5px; text-transform: uppercase; text-decoration: none; border: 1px solid var(--gold); background: linear-gradient(180deg, #b72b2b, #861818); box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 4px 0 #4a0d0d, 0 10px 20px rgba(0,0,0,.45); transition: transform .15s, box-shadow .15s, filter .2s; }
+.btn:hover { transform: translateY(2px); filter: brightness(1.15); box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 2px 0 #4a0d0d, 0 6px 16px rgba(0,0,0,.45), 0 0 22px rgba(201,49,49,.35); }
 .btn-ghost { display: inline-block; padding: 13px 26px; border: 1px solid var(--gold-dim); background: rgba(20,16,12,.6); color: var(--gold-light); font: 600 .82rem var(--font-display); letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: background-color .2s, border-color .2s, color .2s; }
 .btn-ghost:hover { border-color: var(--gold-light); background: rgba(201,161,74,.14); color: #fff; }
-.sword-cta { display: inline-flex; align-items: center; gap: 18px; text-decoration: none; }
-.sword-cta img { width: 150px; height: auto; display: block; transition: filter .25s, transform .25s; }
-.sword-cta:hover img { transform: translateX(8px) rotate(-3deg); filter: drop-shadow(0 0 14px rgba(232,120,42,.75)); }
+/* --- CTA: sword in its scabbard; hover draws the blade a little way out --- */
+.sword-cta { --sw: 230px; --shw: 400px; --hilt: calc(var(--sw) * .27); --draw: 0px; display: inline-block; text-decoration: none; }
+.sc-wrap { position: relative; display: inline-flex; padding-right: var(--hilt); filter: drop-shadow(0 10px 14px rgba(0,0,0,.55)); }
+.sc-sword { position: absolute; right: 0; top: 50%; width: var(--sw); height: auto; z-index: 1; transform: translate(var(--draw), -50%); transition: transform .45s cubic-bezier(.2,.8,.2,1), filter .3s; }
+.sc-sheath { position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; width: var(--shw); aspect-ratio: 939 / 137; padding: 0 6% 0 12%; background: url("../images/sword-sheath.png") center / 100% 100% no-repeat; transition: filter .3s; }
+.sc-label { position: relative; z-index: 1; color: #f4e2b4; font: 700 .9rem var(--font-display); letter-spacing: 2.5px; text-transform: uppercase; white-space: nowrap; text-shadow: 0 1px 0 rgba(0,0,0,.8), 0 0 7px rgba(30,15,5,.85); }
+.sword-cta:hover, .sword-cta:focus-visible { --draw: 95px; }
+.sword-cta:hover .sc-sword, .sword-cta:focus-visible .sc-sword { filter: drop-shadow(0 0 12px rgba(232,120,42,.7)); }
+.sword-cta:hover .sc-sheath, .sword-cta:focus-visible .sc-sheath { filter: brightness(1.15); }
+.sword-cta:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 6px; }
 
 /* ===== HERO ===== */
 #hero { min-height: 90vh; display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: 50px; }
@@ -146,7 +153,7 @@ h3 { margin-bottom: 10px; }
 .hero-mascot { position: relative; padding: 70px 44px 34px; max-width: 450px; margin: 0 auto; width: 100%; display: flex; justify-content: center; align-items: center; }
 .hero-mascot::before { content: ""; position: absolute; inset: 0; border-radius: 999px 999px 10px 10px; border: 2px solid var(--gold); background: radial-gradient(ellipse at 50% 62%, rgba(232,120,42,.38), transparent 62%), linear-gradient(180deg, #1b1611, #0e0b08); box-shadow: inset 0 0 70px rgba(0,0,0,.75), 0 0 0 6px rgba(11,9,7,.85), 0 0 0 7px rgba(201,161,74,.4), 0 30px 60px rgba(0,0,0,.6); animation: flicker 4s ease-in-out infinite; }
 .hero-mascot::after { content: ""; position: absolute; inset: 12px; border-radius: 999px 999px 6px 6px; border: 1px solid rgba(201,161,74,.4); pointer-events: none; }
-.mascot-wrap { position: relative; z-index: 1; width: 100%; display: flex; justify-content: center; }
+.mascot-wrap { position: relative; z-index: 1; width: 100%; display: flex; justify-content: center; top: 35px; left: -10px; }
 .hero-mascot .mascot { position: relative; z-index: 1; width: 100%; max-width: 340px; height: auto; display: block; animation: float 5s ease-in-out infinite; filter: drop-shadow(0 12px 22px rgba(0,0,0,.6)); }
 
 /* ===== TICKER: heraldic tapestry band ===== */
@@ -356,8 +363,9 @@ footer { position: relative; z-index: 1; padding: 58px 24px 26px; color: var(--t
     .steps, .t-two, .foot { grid-template-columns: 1fr; }
     .stats { grid-template-columns: 1fr 1fr; }
     .stats b { font-size: 2.3rem; }
-    .sword-cta img { width: 120px; }
-    .sword-cta span { padding: 12px 16px; font-size: .75rem; letter-spacing: 1.5px; }
+    .sword-cta { --sw: 150px; --shw: 290px; --draw: 0px; }
+    .sc-label { font-size: .72rem; letter-spacing: 1.5px; }
+    .sword-cta:hover, .sword-cta:focus-visible { --draw: 26px; }
     .exp-list em { display: none; }
     .stamp { right: 14px; }
 }
@@ -386,16 +394,16 @@ header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -7px
 
 /* --- hanging heraldic banners + wall torches (wide screens) --- */
 .banner, .torch { display: none; position: absolute; pointer-events: none; }
-.banner { top: -8px; width: 116px; height: auto; transform-origin: 50% 0; animation: sway 7s ease-in-out infinite; filter: drop-shadow(0 12px 14px rgba(0,0,0,.55)); }
-.banner-l { left: calc(50% - 50vw + 20px); }
-.banner-r { right: calc(50% - 50vw + 20px); animation-delay: -3.5s; }
-.torch { top: max(440px, 62%); width: 12px; height: 118px; border-radius: 2px 2px 7px 7px; background: linear-gradient(90deg, #17110c, #55402b 50%, #17110c); box-shadow: 0 6px 10px rgba(0,0,0,.5); }
-.torch-l { left: calc(50% - 50vw + 72px); }
-.torch-r { right: calc(50% - 50vw + 72px); }
+.banner { top: -8px; width: 150px; height: auto; transform-origin: 50% 0; animation: sway 7s ease-in-out infinite; filter: drop-shadow(0 12px 14px rgba(0,0,0,.55)); }
+.banner-l { left: max(calc(50% - 50vw + 12px), -190px); }
+.banner-r { right: max(calc(50% - 50vw + 12px), -190px); animation-delay: -3.5s; }
+.torch { top: max(500px, 75%); width: 12px; height: 118px; border-radius: 2px 2px 7px 7px; background: linear-gradient(90deg, #17110c, #55402b 50%, #17110c); box-shadow: 0 6px 10px rgba(0,0,0,.5); }
+.torch-l { left: max(calc(50% - 50vw + 81px), -121px); }
+.torch-r { right: max(calc(50% - 50vw + 81px), -121px); }
 .torch::before { content: ""; position: absolute; top: -5px; left: -9px; width: 30px; height: 18px; background: linear-gradient(180deg, #7a5f3d, #3d2d1c); clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%); }
 .torch::after { content: ""; position: absolute; left: 50%; top: -60px; width: 340px; height: 340px; margin-left: -170px; background: radial-gradient(circle, rgba(255,150,60,.24), transparent 64%); animation: flicker 3s ease-in-out infinite; }
 .torch i { position: absolute; left: 50%; top: -52px; width: 26px; height: 46px; margin-left: -13px; z-index: 1; border-radius: 50% 50% 50% 50% / 64% 64% 36% 36%; background: radial-gradient(circle at 50% 78%, #fff3b8, #ffb53d 38%, #e8561a 68%, transparent 72%); filter: drop-shadow(0 0 16px rgba(255,150,50,.95)); animation: flame 1.5s ease-in-out infinite; transform-origin: 50% 90%; }
-@media (min-width: 1440px) { .banner, .torch { display: block; } }
+@media (min-width: 1520px) { .banner, .torch { display: block; } }
 
 /* --- quest board: services as parchment notices pinned to timber --- */
 #services { background: radial-gradient(ellipse at 50% 0, rgba(232,120,42,.14), transparent 60%), repeating-linear-gradient(90deg, rgba(0,0,0,.3) 0 2px, transparent 2px 150px), repeating-linear-gradient(90deg, rgba(255,255,255,.018) 0 1px, transparent 1px 7px), linear-gradient(180deg, #2d1f13, #23170e 50%, #2b1d12); border: 1px solid #5a4226; box-shadow: inset 0 0 0 6px #1b110a, inset 0 0 0 7px rgba(201,161,74,.32), inset 0 0 100px rgba(0,0,0,.6); }
