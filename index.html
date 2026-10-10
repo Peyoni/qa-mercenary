@@ -3,175 +3,96 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta
-        name="description"
-        content="QA Mercenary - Professional QA and software testing services."
-    >
+    <meta name="description" content="QA Mercenary - Professional QA and software testing services.">
+    <meta name="theme-color" content="#0b0907">
+    <link rel="canonical" href="https://peyoni.github.io/qa-mercenary/">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"ProfessionalService","name":"QA Mercenary","url":"https://peyoni.github.io/qa-mercenary/","description":"Professional QA and software testing services: game QA, functional, regression and exploratory testing.","image":"https://peyoni.github.io/qa-mercenary/images/qa-mercenary-preview.png","email":"nikolapejic002@gmail.com","founder":{"@type":"Person","name":"Nikola Pejić","jobTitle":"QA Tester","sameAs":["https://github.com/Peyoni","https://www.linkedin.com/in/nikola-peji%C4%87-0641aa229/"]},"serviceType":["Manual Testing","Functional Testing","Regression Testing","Exploratory Testing","Test Cases and Documentation","Bug Reporting"]}
+    </script>
 
     <!-- Open Graph / Link Preview -->
-
-    <meta
-        property="og:title"
-        content="QA Mercenary — You make the game. I break it before players do."
-    >
-
-    <meta
-        property="og:description"
-        content="Professional QA and software testing services. Game QA, functional testing, regression, exploratory testing and more."
-    >
-
-    <meta
-        property="og:image"
-        content="https://peyoni.github.io/qa-mercenary/images/qa-mercenary-preview.png"
-    >
-
-    <meta
-        property="og:url"
-        content="https://peyoni.github.io/qa-mercenary/"
-    >
-
-    <meta
-        property="og:type"
-        content="website"
-    >
+    <meta property="og:title" content="QA Mercenary — You make the game. I break it before players do.">
+    <meta property="og:description" content="Professional QA and software testing services. Game QA, functional testing, regression, exploratory testing and more.">
+    <meta property="og:image" content="https://peyoni.github.io/qa-mercenary/images/qa-mercenary-preview.png">
+    <meta property="og:url" content="https://peyoni.github.io/qa-mercenary/">
+    <meta property="og:type" content="website">
 
     <!-- Twitter / X -->
-
-    <meta
-        name="twitter:card"
-        content="summary_large_image"
-    >
-
-    <meta
-        name="twitter:title"
-        content="QA Mercenary — You make the game. I break it before players do."
-    >
-
-    <meta
-        name="twitter:description"
-        content="Professional QA and software testing services."
-    >
-
-    <meta
-        name="twitter:image"
-        content="https://peyoni.github.io/qa-mercenary/images/qa-mercenary-preview.png"
-    >
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="QA Mercenary — You make the game. I break it before players do.">
+    <meta name="twitter:description" content="Professional QA and software testing services.">
+    <meta name="twitter:image" content="https://peyoni.github.io/qa-mercenary/images/qa-mercenary-preview.png">
 
     <title>QA Mercenary — Professional QA & Testing</title>
 
-    <link
-        rel="icon"
-        type="image/png"
-        href="images/qa-mercenary-logo.png"
-    >
+    <link rel="icon" type="image/png" href="images/qa-mercenary-logo.png">
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="stylesheet" href="css/style.css">
 
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
-
-    <!-- Fonts -->
-
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;900&family=Cinzel+Decorative:wght@700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 </head>
-
 
 <body class="armory-bg">
 
+    <canvas id="embers" aria-hidden="true"></canvas>
+    <a class="skip" href="#hero">Skip to content</a>
+    <div id="progress"></div>
 
-    <!-- Navigation -->
-
-    <header>
-
+    <header id="top">
         <nav>
-
-            <a
-                href="#hero"
-                class="brand-logo"
-            >
-
-                <img
-                    src="images/qa-mercenary-logo.png"
-                    alt="QA Mercenary"
-                >
-
+            <a href="#hero" class="brand">
+                <img src="images/qa-mercenary-logo.png" alt="">
+                <span>QA Mercenary</span>
             </a>
 
-            <a href="#hero">
-                QA Mercenary
-            </a>
-
-            <ul>
-
-                <li>
-                    <a href="#about">
-                        About
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#game-qa">
-                        Experience
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#services">
-                        Services
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#how-i-work">
-                        How I Work
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#contact">
-                        Contact
-                    </a>
-                </li>
-
+            <ul id="menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#game-qa">Experience</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#sample-report">Sample Report</a></li>
+                <li><a href="#how-i-work">Process</a></li>
+                <li><a href="#contact" class="nav-cta">Hire me</a></li>
             </ul>
 
+            <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
         </nav>
-
     </header>
-
 
     <main>
 
-
-        <!-- ========================================
-             HERO
-             ======================================== -->
-
+        <!-- ============ HERO ============ -->
         <section id="hero">
 
+            <!-- guild hall dressing (decorative, wide screens only) -->
+            <svg class="banner banner-l" viewBox="-6 0 102 262" aria-hidden="true">
+                <defs><linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a1c1c"/><stop offset="1" stop-color="#4a0d0d"/></linearGradient></defs>
+                <path d="M0 6h90v236l-45-32-45 32z" fill="url(#bg1)"/>
+                <path d="M7 14h76v212l-38-27-38 27z" fill="none" stroke="#c9a14a" stroke-width="1.5"/>
+                <image href="images/qa-mercenary-logo.png" x="9" y="26" width="72" height="152" preserveAspectRatio="xMidYMid meet"/>
+                <rect x="-6" y="0" width="102" height="9" rx="4.5" fill="#a98631"/>
+                <circle cx="-4" cy="4.5" r="5.5" fill="#d9b560"/><circle cx="94" cy="4.5" r="5.5" fill="#d9b560"/>
+            </svg>
+            <svg class="banner banner-r" viewBox="-6 0 102 262" aria-hidden="true">
+                <defs><linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a1c1c"/><stop offset="1" stop-color="#4a0d0d"/></linearGradient></defs>
+                <path d="M0 6h90v236l-45-32-45 32z" fill="url(#bg2)"/>
+                <path d="M7 14h76v212l-38-27-38 27z" fill="none" stroke="#c9a14a" stroke-width="1.5"/>
+                <image href="images/qa-mercenary-logo.png" x="9" y="26" width="72" height="152" preserveAspectRatio="xMidYMid meet"/>
+                <rect x="-6" y="0" width="102" height="9" rx="4.5" fill="#a98631"/>
+                <circle cx="-4" cy="4.5" r="5.5" fill="#d9b560"/><circle cx="94" cy="4.5" r="5.5" fill="#d9b560"/>
+            </svg>
+            <div class="torch torch-l" aria-hidden="true"><i></i></div>
+            <div class="torch torch-r" aria-hidden="true"><i></i></div>
+
+
             <div class="hero-content">
+                <div class="eyebrow"><i></i>Open for contracts</div>
 
                 <h1>
-                    You make the game.<br>
-                    I break it before players do.
+                    You make the game.
+                    <span>I break it before players do.</span>
                 </h1>
 
                 <p>
@@ -179,548 +100,296 @@
                     reproducing them reliably, and helping you ship with confidence.
                 </p>
 
+                <div class="actions">
+                    <a href="#contact" class="sword-cta" aria-label="Hire the QA Mercenary">
+                        <img src="images/test-sword.png" alt="">
+                        <span>Hire the Mercenary</span>
+                    </a>
+                </div>
             </div>
 
-
             <div class="hero-mascot">
-
-                <img
-                    src="images/qa-mercenary.png"
-                    alt="QA Mercenary"
-                >
-
+                <div class="mascot-wrap"><img src="images/qa-mercenary.png" alt="QA Mercenary" class="mascot"></div>
             </div>
 
         </section>
 
+        <div class="ticker" aria-hidden="true">
+            <div class="track">
+                <span>Manual Testing</span><span>Functional Testing</span><span>Regression Testing</span><span>Exploratory Testing</span><span>Test Cases</span><span>Bug Reporting</span>
+                <span>Manual Testing</span><span>Functional Testing</span><span>Regression Testing</span><span>Exploratory Testing</span><span>Test Cases</span><span>Bug Reporting</span>
+            </div>
+        </div>
 
-        <!-- ========================================
-             TEST SWORD CTA
-             ======================================== -->
-
-        <div class="sword-cta">
-
-            <a
-                href="#contact"
-                aria-label="Hire the QA Mercenary"
-            >
-
-                <img
-                    src="images/test-sword.png"
-                    alt="Hire the QA Mercenary"
-                >
-
-            </a>
-
-            <span>
-                HIRE THE MERCENARY
-            </span>
-
+        <div class="stats">
+            <div class="rv"><b><span data-count="4.5" data-dec="1">4.5</span></b><small>Years in AAA game QA</small></div>
+            <div class="rv"><b class="logo-stat"><img src="images/ubisoft-logo.png" alt="Ubisoft"></b><small>Development Tester, Belgrade</small></div>
+            <div class="rv"><b><span data-count="4">4</span></b><small>Projects, 2 unannounced</small></div>
+            <div class="rv"><b><span data-count="4">4</span></b><small>Platforms shipped on</small></div>
         </div>
 
 
-        <!-- ========================================
-             ABOUT
-             ======================================== -->
-
+        <!-- ============ ABOUT ============ -->
         <section id="about">
 
-            <h2>
-                About
-            </h2>
+            <div class="section-head rv">
+                <h2>About</h2>
+                <span class="line" aria-hidden="true"></span>
+            </div>
 
-            <div class="about-content">
-
+            <div class="about-content rv">
                 <div class="about-intro">
-
                     <p>
-                        I'm Nikola, a QA professional with 4.5 years of hands-on experience in AAA game development.
+                        <span class="dropcap">I</span>'m Nikola, a QA professional with <mark>4.5 years</mark> of hands-on experience in AAA game development.
                     </p>
-
                 </div>
 
                 <div class="about-details">
-
                     <p>
                         I've worked as a Development Tester at Ubisoft Belgrade,
                         contributing to major franchises across multiple platforms.
                     </p>
-
                     <p>
                         My approach combines structured testing with exploratory investigation,
                         with a focus on finding issues, reproducing them reliably,
                         and communicating them clearly.
                     </p>
-
                 </div>
+            </div>
 
+            <div class="principles">
+                <div class="spot rv"><h3>Find early</h3><p>Structured and exploratory testing that surfaces issues before players do.</p></div>
+                <div class="spot rv"><h3>Reproduce reliably</h3><p>Precise steps and evidence, so every issue can be fixed fast.</p></div>
+                <div class="spot rv"><h3>Communicate clearly</h3><p>Reports that are clear, reproducible and actionable.</p></div>
             </div>
 
         </section>
 
 
-        <!-- ========================================
-             EXPERIENCE
-             ======================================== -->
-
+        <!-- ============ EXPERIENCE ============ -->
         <section id="game-qa">
 
-            <div class="game-qa-header">
-
-                <img
-                    src="images/ubisoft-logo.png"
-                    alt="Ubisoft"
-                    class="ubisoft-logo"
-                >
-
-                <h2>
-                    Experience
-                </h2>
-
-                <img
-                    src="images/qa-mercenary-victory.png"
-                    alt="QA Mercenary celebrating a game QA victory"
-                >
-
+            <div class="section-head rv">
+                <h2>Experience</h2>
+                <span class="line" aria-hidden="true"></span>
             </div>
 
+            <div class="exp-grid rv">
 
-            <div class="game-qa-content">
-
-                <div class="game-qa-intro">
-
+                <div class="exp-intro">
                     <p>
                         4.5 years of hands-on QA experience in AAA game development,
                         across multiple platforms, projects, and testing environments.
                     </p>
-
+                    <img loading="lazy" decoding="async" src="images/qa-mercenary-victory.png" alt="QA Mercenary celebrating a game QA victory" class="victory">
                 </div>
 
+                <div class="exp-list">
+                    <h3>Projects</h3>
+                    <ol>
+                        <li><span>Assassin's Creed IV: Black Flag Resynced</span><em>Credited</em></li>
+                        <li><span>Assassin's Creed Nexus VR</span><em>Credited</em></li>
+                        <li><span>Unannounced project 01</span><em class="dim">Unannounced</em></li>
+                        <li><span>Unannounced project 02</span><em class="dim">Unannounced</em></li>
+                    </ol>
 
-                <div class="game-qa-details">
-
-                    <div>
-
-                        <h3>
-                            Projects
-                        </h3>
-
-                        <ul>
-
-                            <li>
-                                Assassin's Creed IV: Black Flag Resynced
-                            </li>
-
-                            <li>
-                                Assassin's Creed Nexus VR
-                            </li>
-
-                            <li>
-                                Unannounced project 01
-                            </li>
-
-                            <li>
-                                Unannounced project 02
-                            </li>
-
-                        </ul>
-
+                    <h3>Platforms</h3>
+                    <div class="plat">
+                        <span>PC</span><span>PlayStation 5</span><span>Xbox Series X/S</span><span>Oculus Quest 2</span>
                     </div>
-
-
-                    <div>
-
-                        <h3>
-                            Platforms
-                        </h3>
-
-                        <ul>
-
-                            <li>
-                                PC
-                            </li>
-
-                            <li>
-                                PlayStation 5
-                            </li>
-
-                            <li>
-                                Xbox Series X/S
-                            </li>
-
-                            <li>
-                                Oculus Quest 2
-                            </li>
-
-                        </ul>
-
-                    </div>
-
                 </div>
 
             </div>
 
-
-            <div class="game-qa-portfolio">
-
-                <div class="portfolio-item">
-
-                    <img
-                        src="images/black-flag-resynced-credits.png"
-                        alt="Assassin's Creed Black Flag Resynced credits showing QA team"
-                    >
-
-                    <h3>
-                        Assassin's Creed Black Flag Resynced
-                    </h3>
-
-                </div>
-
-
-                <div class="portfolio-item">
-
-                    <img
-                        src="images/assassins-creed-nexus-vr-credits.png"
-                        alt="Assassin's Creed Nexus VR credits showing QA team"
-                    >
-
-                    <h3>
-                        Assassin's Creed Nexus VR
-                    </h3>
-
-                </div>
-
+            <div class="credits">
+                <figure class="spot rv">
+                    <div class="shot"><img loading="lazy" decoding="async" src="images/black-flag-resynced-credits.png" alt="Assassin's Creed Black Flag Resynced credits showing QA team"></div>
+                    <figcaption>Assassin's Creed Black Flag Resynced</figcaption>
+                </figure>
+                <figure class="spot rv">
+                    <div class="shot"><img loading="lazy" decoding="async" src="images/assassins-creed-nexus-vr-credits.png" alt="Assassin's Creed Nexus VR credits showing QA team"></div>
+                    <figcaption>Assassin's Creed Nexus VR</figcaption>
+                </figure>
             </div>
 
         </section>
 
 
-        <!-- ========================================
-             SERVICES
-             ======================================== -->
-
+        <!-- ============ SERVICES ============ -->
         <section id="services">
 
-            <div class="services-header">
-
-                <img
-                    src="images/qa-mercenary-finding-bugs.png"
-                    alt="QA Mercenary finding bugs"
-                >
-
-                <h2>
-                    Services
-                </h2>
-
+            <div class="section-head rv">
+                <div class="mascot-say"><img loading="lazy" decoding="async" src="images/qa-mercenary-finding-bugs.png" alt="QA Mercenary finding bugs" class="head-mascot"><span class="bubble" aria-hidden="true">Found one.</span></div>
+                <h2>Services</h2>
+                <span class="line" aria-hidden="true"></span>
             </div>
 
-
-            <article>
-
-                <h3>
-                    Manual Testing
-                </h3>
-
-                <p>
-                    Hands-on testing focused on finding functional, usability, and unexpected issues.
-                </p>
-
-            </article>
-
-
-            <article>
-
-                <h3>
-                    Functional Testing
-                </h3>
-
-                <p>
-                    Verifying that features work as intended and behave according to requirements.
-                </p>
-
-            </article>
-
-
-            <article>
-
-                <h3>
-                    Regression Testing
-                </h3>
-
-                <p>
-                    Verifying that new changes have not introduced new issues or broken existing functionality.
-                </p>
-
-            </article>
-
-
-            <article>
-
-                <h3>
-                    Exploratory Testing
-                </h3>
-
-                <p>
-                    Unscripted, risk-based testing designed to uncover unexpected issues and edge cases beyond predefined test cases.
-                </p>
-
-            </article>
-
-
-            <article>
-
-                <h3>
-                    Test Cases & Documentation
-                </h3>
-
-                <p>
-                    Creating clear, structured test cases and QA documentation that make testing easier to execute, track, and maintain.
-                </p>
-
-            </article>
-
-
-            <article>
-
-                <h3>
-                    Bug Reporting
-                </h3>
-
-                <p>
-                    Clear, reproducible and actionable defect reports.
-                </p>
-
-            </article>
+            <div class="services-grid">
+                <article class="spot rv">
+                    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.2 3.2V15H9.8V5.2z"/><path d="M6.5 15h11M12 15v5.5"/><circle cx="12" cy="21.6" r="0.9"/></svg>
+                    <h3>Manual Testing</h3>
+                    <p>Hands-on testing focused on finding functional, usability, and unexpected issues.</p>
+                </article>
+                <article class="spot rv">
+                    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5.2c0 4.6-3 7.6-7 9.8-4-2.2-7-5.2-7-9.8V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg>
+                    <h3>Functional Testing</h3>
+                    <p>Verifying that features work as intended and behave according to requirements.</p>
+                </article>
+                <article class="spot rv">
+                    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 10-2.3 5.7"/><path d="M20 4v7h-7"/></svg>
+                    <h3>Regression Testing</h3>
+                    <p>Verifying that new changes have not introduced new issues or broken existing functionality.</p>
+                </article>
+                <article class="spot rv">
+                    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>
+                    <h3>Exploratory Testing</h3>
+                    <p>Unscripted, risk-based testing designed to uncover unexpected issues and edge cases beyond predefined test cases.</p>
+                </article>
+                <article class="spot rv">
+                    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h10v13.5a3.5 3.5 0 003.5 3.5H9a3 3 0 01-3-3V6a3 3 0 012-3z"/><path d="M11 8h4.5M11 12h4.5"/></svg>
+                    <h3>Test Cases &amp; Documentation</h3>
+                    <p>Creating clear, structured test cases and QA documentation that make testing easier to execute, track, and maintain.</p>
+                </article>
+                <article class="spot rv">
+                    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7a3 3 0 016 0M7 10h10v4a5 5 0 01-10 0zM12 10v9M4 11l3 1M20 11l-3 1M4 18l3-2M20 18l-3-2"/></svg>
+                    <h3>Bug Reporting</h3>
+                    <p>Clear, reproducible and actionable defect reports.</p>
+                </article>
+            </div>
 
         </section>
 
 
-        <!-- ========================================
-             HOW I WORK
-             ======================================== -->
+        <!-- ============ SAMPLE REPORT ============ -->
+        <section id="sample-report">
 
-        <section id="how-i-work">
+            <div class="sample">
 
-            <div class="how-i-work-header">
+                <div class="sample-text rv">
+                    <div class="kicker">Bug Reporting</div>
+                    <h2>What a good report looks like</h2>
+                    <p>Precise steps, expected versus actual results, and useful evidence, so developers can reproduce and fix an issue without a single follow-up question.</p>
+                    <small>Illustrative example, not a real project issue.</small>
+                </div>
 
-                <img
-                    src="images/qa-mercenary-thinking.png"
-                    alt="QA Mercenary thinking"
-                >
-
-                <h2>
-                    How I Work
-                </h2>
+                <div class="ticket rv">
+                    <div class="t-top">
+                        <span>QAM-0417</span>
+                        <span class="sev">CRITICAL</span>
+                    </div>
+                    <h3>Save data corrupts when fast travelling during an autosave</h3>
+                    <dl>
+                        <dt>Reproducibility</dt><dd>5 / 5</dd>
+                        <dt>Platform</dt><dd>Console build</dd>
+                    </dl>
+                    <div class="t-block">
+                        <b>Steps to reproduce</b>
+                        <ol>
+                            <li>Trigger an autosave by completing a mission objective.</li>
+                            <li>Fast travel while the autosave icon is visible.</li>
+                            <li>Quit to menu and load the latest save.</li>
+                        </ol>
+                    </div>
+                    <div class="t-two">
+                        <div><b>Expected</b><p>Save loads at the last checkpoint.</p></div>
+                        <div><b>Actual</b><p>Save is flagged as corrupted and cannot be loaded.</p></div>
+                    </div>
+                    <div class="stamp" aria-hidden="true">Verified</div>
+                    <div class="t-foot">
+                        <span>Evidence: video + log attached</span>
+                        <span class="flow"><i>New</i><i>Fixed</i><i class="ok">Verified</i></span>
+                    </div>
+                </div>
 
             </div>
 
-
-            <ol>
-
-                <li>
-
-                    <h3>
-                        Discover
-                    </h3>
-
-                    <p>
-                        Understand the product, its risks, features, and what needs to be tested.
-                    </p>
-
-                </li>
+        </section>
 
 
-                <li>
+        <!-- ============ PROCESS ============ -->
+        <section id="how-i-work">
 
-                    <h3>
-                        Test
-                    </h3>
+            <div class="section-head rv">
+                <div class="mascot-say"><img loading="lazy" decoding="async" src="images/qa-mercenary-thinking.png" alt="QA Mercenary thinking" class="head-mascot"><span class="bubble" aria-hidden="true">Hmm… suspicious.</span></div>
+                <h2>How I Work</h2>
+                <span class="line" aria-hidden="true"></span>
+            </div>
 
-                    <p>
-                        Use structured and exploratory testing to uncover issues from different perspectives.
-                    </p>
-
-                </li>
-
-
-                <li>
-
-                    <h3>
-                        Report
-                    </h3>
-
-                    <p>
-                        Document issues clearly with precise steps, expected results, and useful evidence.
-                    </p>
-
-                </li>
-
-
-                <li>
-
-                    <h3>
-                        Verify
-                    </h3>
-
-                    <p>
-                        Retest fixes, verify expected behaviour, and confirm issues are properly resolved.
-                    </p>
-
-                </li>
-
+            <ol class="steps">
+                <li class="spot rv"><h3>Discover</h3><p>Understand the product, its risks, features, and what needs to be tested.</p></li>
+                <li class="spot rv"><h3>Test</h3><p>Use structured and exploratory testing to uncover issues from different perspectives.</p></li>
+                <li class="spot rv"><h3>Report</h3><p>Document issues clearly with precise steps, expected results, and useful evidence.</p></li>
+                <li class="spot rv"><h3>Verify</h3><p>Retest fixes, verify expected behaviour, and confirm issues are properly resolved.</p></li>
             </ol>
 
         </section>
 
 
-        <!-- ========================================
-             WHY QA MERCENARY
-             ======================================== -->
-
+        <!-- ============ WHY ============ -->
         <section id="why-qa-mercenary">
 
             <div class="why-content">
-
                 <div class="why-text">
-
-                    <h2>
-                        Why QA Mercenary?
-                    </h2>
-
-                    <p>
-                        Thorough testing.
-                    </p>
-
-                    <p>
-                        Clear reports.
-                    </p>
-
-                    <p>
-                        Fewer surprises.
-                    </p>
-
+                    <h2 class="rv">Why QA Mercenary?</h2>
+                    <p class="rv">Thorough testing.</p>
+                    <p class="rv">Clear reports.</p>
+                    <p class="rv">Fewer surprises.</p>
                 </div>
-
-
-                <div class="why-mascot">
-
-                    <img
-                        src="images/qa-merc-hand.png"
-                        alt="QA Mercenary"
-                    >
-
+                <div class="why-mascot rv">
+                    <img loading="lazy" decoding="async" src="images/qa-merc-hand.png" alt="QA Mercenary">
                 </div>
-
             </div>
 
         </section>
 
 
-        <!-- ========================================
-             CONTACT
-             ======================================== -->
-
+        <!-- ============ CONTACT ============ -->
         <section id="contact">
 
-            <div class="contact-content">
+            <div class="contact-content rv">
 
                 <div class="contact-text">
-
-                    <h2>
-                        Let's Talk
-                    </h2>
-
+                    <img loading="lazy" decoding="async" class="contact-mascot" src="images/qa-merc-parchment-pose.png" alt="QA Mercenary holding a parchment">
+                    <div class="kicker">Contract open</div>
+                    <h2>Let's Talk</h2>
                     <p>
                         Have a project that needs testing?
                         Let's talk about what you need and how I can help.
                     </p>
 
-                    <a href="mailto:nikolapejic002@gmail.com">
-                        Get in Touch
-                    </a>
-
-
-                    <div class="contact-links">
-
-                        <a
-                            href="https://github.com/Peyoni"
-                            target="_blank"
-                            rel="noopener"
-                        >
-
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-
-                                <path
-                                    d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.38-3.37-1.38-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.64-1.38-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.1 9.1 0 0 1 12 7.03c.85 0 1.7.12 2.5.36 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.25 10.25 0 0 0 22 12.23C22 6.58 17.52 2 12 2z"
-                                />
-
-                            </svg>
-
-                            GitHub
-
-                        </a>
-
-
-                        <a
-                            href="https://www.linkedin.com/in/nikola-peji%C4%87-0641aa229/"
-                            target="_blank"
-                            rel="noopener"
-                        >
-
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-
-                                <rect
-                                    x="2"
-                                    y="2"
-                                    width="20"
-                                    height="20"
-                                    rx="4"
-                                    fill="currentColor"
-                                />
-
-                                <path
-                                    d="M7 10v7M7 7v.01M11 17v-4c0-1.1.9-2 2-2s2 .9 2 2v4M11 10v7"
-                                    fill="none"
-                                    stroke="#15171c"
-                                    stroke-width="1.8"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-
-                            </svg>
-
-                            LinkedIn
-
-                        </a>
-
-
-                        <a
-                            href="assets/Nikola-Pejic-CV.pdf"
-                            target="_blank"
-                            rel="noopener"
-                        >
-                            CV
-                        </a>
-
+                    <div class="actions">
+                        <a href="mailto:nikolapejic002@gmail.com" class="btn">Get in Touch</a>
+                        <button type="button" class="btn-ghost" id="copyMail" data-mail="nikolapejic002@gmail.com">Copy email</button>
                     </div>
 
+                    <div class="contact-links">
+                        <a href="https://github.com/Peyoni" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.38-3.37-1.38-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.64-1.38-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.1 9.1 0 0 1 12 7.03c.85 0 1.7.12 2.5.36 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.25 10.25 0 0 0 22 12.23C22 6.58 17.52 2 12 2z"/></svg>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/nikola-peji%C4%87-0641aa229/" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="4" fill="currentColor"/>
+                                <path d="M7 10v7M7 7v.01M11 17v-4c0-1.1.9-2 2-2s2 .9 2 2v4M11 10v7" fill="none" stroke="#15171c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            LinkedIn
+                        </a>
+                        <a href="assets/Nikola-Pejic-CV.pdf" target="_blank" rel="noopener">CV</a>
+                    </div>
                 </div>
 
-
-                <div class="contact-mascot">
-
-                    <img
-                        src="images/qa-merc-parchment-pose.png"
-                        alt="QA Mercenary holding a parchment"
-                    >
-
-                </div>
+                <form class="brief" id="brief" action="mailto:nikolapejic002@gmail.com" method="post" enctype="text/plain">
+                    <h3>Send a quick brief</h3>
+                    <label>Your name<input name="name" required autocomplete="name"></label>
+                    <label>Project or studio<input name="project"></label>
+                    <fieldset>
+                        <legend>What do you need?</legend>
+                        <div class="chips"><label><input type="checkbox" name="services" value="Manual Testing"><span>Manual</span></label><label><input type="checkbox" name="services" value="Functional Testing"><span>Functional</span></label><label><input type="checkbox" name="services" value="Regression Testing"><span>Regression</span></label><label><input type="checkbox" name="services" value="Exploratory Testing"><span>Exploratory</span></label><label><input type="checkbox" name="services" value="Test Cases & Documentation"><span>Test cases &amp; docs</span></label><label><input type="checkbox" name="services" value="Bug Reporting"><span>Bug reporting</span></label></div>
+                    </fieldset>
+                    <label>Message<textarea name="message" rows="4" placeholder="Platforms, timeline, build status…"></textarea></label>
+                    <button class="btn" type="submit">Send brief</button>
+                    <small>Opens your email app with the brief filled in.</small>
+                </form>
 
             </div>
 
@@ -728,17 +397,29 @@
 
     </main>
 
-
-    <!-- Footer -->
-
     <footer>
-
-        <p>
-            &copy; 2026 QA Mercenary. All rights reserved.
-        </p>
-
+        <div class="foot">
+            <div class="foot-brand">
+                <a href="#hero" class="brand"><img src="images/qa-mercenary-logo.png" alt=""><span>QA Mercenary</span></a>
+                <p>You make the game. I break it before players do.</p>
+            </div>
+            <div class="foot-links">
+                <b>Navigate</b>
+                <a href="#about">About</a><a href="#game-qa">Experience</a><a href="#services">Services</a><a href="#sample-report">Sample Report</a><a href="#how-i-work">Process</a>
+            </div>
+            <div class="foot-links">
+                <b>Contact</b>
+                <a href="mailto:nikolapejic002@gmail.com">nikolapejic002@gmail.com</a>
+                <a href="https://github.com/Peyoni" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/nikola-peji%C4%87-0641aa229/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="assets/Nikola-Pejic-CV.pdf" target="_blank" rel="noopener">CV</a>
+            </div>
+        </div>
+        <div class="foot-bottom">
+            <p>&copy; 2026 QA Mercenary. All rights reserved.</p>
+            <a href="#top" class="totop">Back to top ↑</a>
+        </div>
     </footer>
-
 
     <script src="js/main.js"></script>
 
